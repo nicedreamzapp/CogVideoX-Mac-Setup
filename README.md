@@ -30,31 +30,46 @@ Successfully runs **CogVideoX-5B** (10GB model) for text-to-video generation on 
 
 ---
 
-## 🎥 Examples
+## 🎥 Generated Examples
+
+<table>
+<tr>
+<td width="50%">
 
 ### Waterfall in Mossy Forest
-*30 frames, 30 steps, 512x384, 18 minutes*
+*30 frames, 30 steps, 18 min*
 
 https://github.com/user-attachments/assets/f756588c-2bfa-4a37-af1d-1577b85fd01a
 
-![Waterfall Frame](examples/screenshots/waterfall.png)
-
-<details>
-<summary>📹 More Examples</summary>
+</td>
+<td width="50%">
 
 ### Example 1
+*25 frames, 20 steps, 12 min*
 
 https://github.com/user-attachments/assets/92cbac80-d2ed-4745-a77c-8c1c9c12ff0e
 
+</td>
+</tr>
+<tr>
+<td width="50%">
+
 ### Example 2
+*25 frames, 20 steps, 12 min*
 
 https://github.com/user-attachments/assets/ee226225-1c2d-4d47-8f4b-f42932e9987f
 
+</td>
+<td width="50%">
+
 ### Example 3
+*25 frames, 20 steps, 12 min*
 
 https://github.com/user-attachments/assets/a7fc65d9-06bb-46b5-817c-6336ff245527
 
-</details>
+</td>
+</tr>
+</table>
 
 ---
 
@@ -129,8 +144,8 @@ pip install -r requirements.txt
 # Backup original
 cp nodes.py nodes.py.backup
 
-# Apply fixes (see fixes/nodes_fixed.py in this repo)
-# OR manually apply the patches below
+# Download and apply our fixed version
+curl -o nodes.py https://raw.githubusercontent.com/nicedreamzapp/CogVideoX-Mac-Setup/main/fixes/nodes_fixed.py
 ```
 
 #### Fix 1: MPS Autocast Compatibility
@@ -186,9 +201,10 @@ python main.py --force-fp16 --lowvram
 ### 6. Load Workflow
 
 1. Open http://127.0.0.1:8188
-2. Drag `workflows/cogvideox_1_0_5b_T2V_02.json` into browser
-3. Adjust settings (see Optimal Settings below)
-4. Queue Prompt!
+2. Download [our workflow](workflows/cogvideox_1_0_5b_T2V_02.json)
+3. Drag into ComfyUI browser
+4. Adjust settings (see below)
+5. Queue Prompt!
 
 ---
 
@@ -271,13 +287,9 @@ CogVideoX-Mac-Setup/
 │   └── nodes_fixed.py          # Mac-compatible version
 ├── workflows/
 │   └── cogvideox_1_0_5b_T2V_02.json
-├── examples/
-│   ├── videos/
-│   │   └── (hosted on GitHub releases)
-│   └── screenshots/
-│       └── waterfall.png
-└── docs/
-    └── TROUBLESHOOTING.md
+└── examples/
+    ├── videos/          # (hosted on GitHub)
+    └── screenshots/
 ```
 
 ### Technical Details
