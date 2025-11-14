@@ -14,6 +14,6 @@ venv/
 # Mac
 .DS_Store
 
-# Temp files
+# Temp
 *.tmp
 *.log
