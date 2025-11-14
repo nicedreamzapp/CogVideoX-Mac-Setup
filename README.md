@@ -35,18 +35,24 @@ Successfully runs **CogVideoX-5B** (10GB model) for text-to-video generation on 
 ### Waterfall in Mossy Forest
 *30 frames, 30 steps, 512x384, 18 minutes*
 
-https://github.com/user-attachments/assets/waterfall_success.mp4
+https://github.com/user-attachments/assets/f756588c-2bfa-4a37-af1d-1577b85fd01a
 
 ![Waterfall Frame](examples/screenshots/waterfall.png)
 
 <details>
 <summary>📹 More Examples</summary>
 
+### Example 1
+
+https://github.com/user-attachments/assets/92cbac80-d2ed-4745-a77c-8c1c9c12ff0e
+
 ### Example 2
-https://github.com/user-attachments/assets/example_2.mp4
+
+https://github.com/user-attachments/assets/ee226225-1c2d-4d47-8f4b-f42932e9987f
 
 ### Example 3
-https://github.com/user-attachments/assets/example_3.mp4
+
+https://github.com/user-attachments/assets/a7fc65d9-06bb-46b5-817c-6336ff245527
 
 </details>
 
@@ -148,7 +154,7 @@ else:
 
 #### Fix 2: Default H/W Values
 
-The default H/W values around line ~684 should already be there, but verify:
+Around line ~684, verify these default values exist:
 ```python
 else:
     # Default dimensions for text-to-video
@@ -267,8 +273,7 @@ CogVideoX-Mac-Setup/
 │   └── cogvideox_1_0_5b_T2V_02.json
 ├── examples/
 │   ├── videos/
-│   │   ├── waterfall_success.mp4
-│   │   └── ...
+│   │   └── (hosted on GitHub releases)
 │   └── screenshots/
 │       └── waterfall.png
 └── docs/
