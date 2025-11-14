@@ -1,0 +1,19 @@
+# Models (too large for GitHub)
+*.safetensors
+*.ckpt
+*.pth
+*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Mac
+.DS_Store
+
+# Temp files
+*.tmp
+*.log
